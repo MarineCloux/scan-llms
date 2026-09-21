@@ -15,8 +15,12 @@ Université de Lorraine.
 
 ## Citation
 
-A citation will be provided upon publication of the associated research article.
+If you use SCAN-LLMs in your research, please cite the archived version of the ontology:
+
+SCAN-LLMs Ontology, version 1.0.0. Zenodo. https://doi.org/10.5281/zenodo.22869604
 
 ## License
 
-License information will be provided after verification of the applicable intellectual property requirements.
+SCAN-LLMs is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
+
+https://creativecommons.org/licenses/by/4.0/
