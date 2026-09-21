@@ -10,8 +10,8 @@ The ontology enables LLM uses to be contextualized according to pedagogical dime
 
 ## Authors
 
-Cloux Marine, Monticolo Davy, Bary Raphaël
-Université de Lorraine
+Cloux Marine, Monticolo Davy, Bary Raphaël.
+Université de Lorraine.
 
 ## Citation
 
