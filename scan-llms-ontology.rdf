@@ -1,0 +1,2218 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms/"
+     xml:base="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:scan-llms="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms">
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToActivity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasTask"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToSequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToSequence">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#belongsToStage">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasActivity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#genericTaskTargetsSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#genericTaskTargetsSkill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasGenericTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasGenericTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasLearningMomentType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasLearningMomentType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasPedagogicalFormula -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasPedagogicalFormula">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasSequenceLearningObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasSequenceLearningObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasSequenceLearningObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasSequenceLearningObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStageLearningObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStageLearningObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStageLearningObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasStageLearningObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasUsage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasUsage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#involvesAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#involvesAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskTargetsSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskTargetsSkill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#hasGenericTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#genericTaskTargetsSkill"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usesApplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usesApplication">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#cognitiveComplexityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#cognitiveComplexityScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#programLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#programLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageDeclared -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageDeclared">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageMotivation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageMotivation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAITool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAITool"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAIUsage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAIUsage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Learner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Learner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Teacher"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStructureElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAITool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenAIUsage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Teacher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Teacher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#AnalyticalDimension"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatPDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatPDF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Perplexity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Perplexity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityAttendingTheLecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityAttendingTheLecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageIntroductionToInnovationEngineering"/>
+        <scan-llms:hasAgent rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageTakingOwnershipOfAnInnovationProcess"/>
+        <scan-llms:hasAgent rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMCompleteSimulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMCompleteSimulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToRiskAnalysisTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMContinueSimulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMContinueSimulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToFinancialAnalysisTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMApplicationOfPlanningAndFinancialEstimationToolsToAComplexCaseStudy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPrepareForOralAssessment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPrepareForOralAssessment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMAssessmentOfClassicalProjectManagementCompetenciesAndRiskAnalysisTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMTakeSupervisedWrittenExamination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMTakeSupervisedWrittenExamination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMAssessmentOfClassicalProjectManagementCompetenciesAndRiskAnalysisTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityTakingTheExam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityTakingTheExam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageCarryingOutAnInnovationDiagnosisUsingAppropriateToolsAndMakingRecommandations"/>
+        <scan-llms:hasAgent rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyFunctionalAnalysisToolsToCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyFunctionalAnalysisToolsToCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfFunctionalAnalysisToolsToCaseStudy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyValueManagementToolsToCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyValueManagementToolsToCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementToolsToCaseStudyBasedOnFunctionalAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMAttendLecture_S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMAttendLecture_S1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMIntroductionToValueManagementApproach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMAttendLecture_S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMAttendLecture_S3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMTheoreticalFoundationsOfValueBasedProjectManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMCompleteIntermediateAssessment_S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMCompleteIntermediateAssessment_S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfFunctionalAnalysisToolsToCaseStudy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMCompleteIntermediateAssessment_S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMCompleteIntermediateAssessment_S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementToolsToCaseStudyBasedOnFunctionalAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfFunctionalAnalysisToolsToCaseStudy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementToolsToCaseStudyBasedOnFunctionalAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMTakeSupervisedWrittenExamination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMTakeSupervisedWrittenExamination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementWithFunctionalAnalysisPhaseToCaseStudy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningActivity"/>
+        <scan-llms:belongsToStage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageApplicationOfTheToolsOfInnovationEngineeringToCaseStudies"/>
+        <scan-llms:hasAgent rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#analyze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#analyze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringExamQuestions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringExamQuestions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#askingQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#askingQuestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#collaboration"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#calculating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#calculating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutDocumentaryResearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutDocumentaryResearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutTheCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutTheCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#clarifyingPoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#clarifyingPoint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#collaboration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#collaboration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#communityBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#communityBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#cooperativeLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#cooperativeLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#correctingText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#correctingText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creatingAnImage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creatingAnImage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstrationBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstrationBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#discussionBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#discussionBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#drillBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#drillBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluatingMyWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluatingMyWork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#collaboration"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#extractingInformationFromADocument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#extractingInformationFromADocument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#findingIdea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#findingIdea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#fixingMyWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#fixingMyWork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#gameBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#gameBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#generatingAPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#generatingAPlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#guidedInquiryBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#guidedInquiryBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#interviewBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#interviewBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#introduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#introduction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningMomentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#laboratoryBasedDesign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#laboratoryBasedDesign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#learnerInnovationEngineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Learner"/>
+        <scan-llms:programLevel>2AI</scan-llms:programLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingForExample -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingForExample">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingUpDefinition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingUpDefinition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#metacognitiveKnowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#metacognitiveKnowledge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#modularLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#modularLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#peerInstructionBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#peerInstructionBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#preparingAPresentationSupport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#preparingAPresentationSupport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#21stCenturySkill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#programmedInstructionBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#programmedInstructionBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#projectBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#projectBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#protocolBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#protocolBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#reformulating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#reformulating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#remember -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#remember">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#rolePlaying -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#rolePlaying">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#problemSolving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasSequenceLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasSequenceLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningSequence"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasSequenceLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasSequenceLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#simulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#simulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageApplicationOfTheToolsOfInnovationEngineeringToCaseStudies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageApplicationOfTheToolsOfInnovationEngineeringToCaseStudies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#analyze"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageCarryingOutAnInnovationDiagnosisUsingAppropriateToolsAndMakingRecommandations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageCarryingOutAnInnovationDiagnosisUsingAppropriateToolsAndMakingRecommandations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstration"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageIntroductionToInnovationEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageIntroductionToInnovationEngineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#introduction"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#understand"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMApplicationOfPlanningAndFinancialEstimationToolsToAComplexCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMApplicationOfPlanningAndFinancialEstimationToolsToAComplexCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#simulation"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMAssessmentOfClassicalProjectManagementCompetenciesAndRiskAnalysisTools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMAssessmentOfClassicalProjectManagementCompetenciesAndRiskAnalysisTools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstration"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToFinancialAnalysisTools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToFinancialAnalysisTools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#simulation"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToFinancialEstimationTools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToFinancialEstimationTools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToPlanningTools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToPlanningTools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToProjectPlanning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToProjectPlanning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#introduction"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#analyze"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToRiskAnalysisTools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stagePMIntroductionToRiskAnalysisTools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceProjectManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#simulation"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#apply"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageTakingOwnershipOfAnInnovationProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageTakingOwnershipOfAnInnovationProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceInnovationEngineering"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfFunctionalAnalysisToolsToCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfFunctionalAnalysisToolsToCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#analyze"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementToolsToCaseStudyBasedOnFunctionalAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementToolsToCaseStudyBasedOnFunctionalAnalysis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#consolidation"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluate"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementWithFunctionalAnalysisPhaseToCaseStudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMApplicationOfValueManagementWithFunctionalAnalysisPhaseToCaseStudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#demonstration"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#caseStudy"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#proceduralKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#create"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMIntroductionToValueManagementApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMIntroductionToValueManagementApproach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#introduction"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#understand"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMTheoreticalFoundationsOfValueBasedProjectManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#stageVMTheoreticalFoundationsOfValueBasedProjectManagement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningStage"/>
+        <scan-llms:belongsToSequence rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#sequenceValueManagement"/>
+        <scan-llms:hasLearningMomentType rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#acquisition"/>
+        <scan-llms:hasPedagogicalFormula rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lectureBasedLearning"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#conceptualKnowledge"/>
+        <scan-llms:hasStageLearningObject rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#factualKnowledge"/>
+        <scan-llms:hasStageLearningObjective rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#understand"/>
+        <scan-llms:stageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</scan-llms:stageOrder>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#summarizing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#summarizing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAnsweringQuestionWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAnsweringQuestionWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAnsweringQuestionWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskingQuestionAttendingTheLecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskingQuestionAttendingTheLecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityAttendingTheLecture"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#askingQuestion"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionAttendingTheLecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskingQuestionDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskingQuestionDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#askingQuestion"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskinqQuestionWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskAskinqQuestionWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#askingQuestion"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutBibliographicalResearchWorkingInteams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutBibliographicalResearchWorkingInteams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutDocumentaryResearch"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutBibliographicalResearchWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutDocumentaryResearchDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutDocumentaryResearchDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutDocumentaryResearch"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutDocumentaryResearchDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutTheCaseStudyWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCarryingOutTheCaseStudyWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#carryingOutTheCaseStudy"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutTheCaseStudyWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskClarifyingPointDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskClarifyingPointDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#clarifyingPoint"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskClarifyingPointWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskClarifyingPointWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#clarifyingPoint"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointWorkingInteams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCorrectingTextDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskCorrectingTextDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#correctingText"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCorrectingTextDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskEvaluatingMyWorkDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskEvaluatingMyWorkDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#evaluatingMyWork"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfEvaluatingMyWorkDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskExtractingInformationFromADocumentDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskExtractingInformationFromADocumentDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#extractingInformationFromADocument"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfExtractingInformationOfADocumentDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskFindingIdeaDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskFindingIdeaDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#findingIdea"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfFindingIdeaDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingForExampleDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingForExampleDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingForExample"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingForExampleWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingForExampleWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingForExample"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingUpDefinitionAttendingTheLecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskLookingUpDefinitionAttendingTheLecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityAttendingTheLecture"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingUpDefinition"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingUpDefinitionAttendingTheLecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerExaminationQuestions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerExaminationQuestions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMTakeSupervisedWrittenExamination"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringExamQuestions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMContinueSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMAnswerSimulationQuestions_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMCompleteSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#answeringQuestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMGenerateIdeas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMGenerateIdeas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#findingIdea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMGenerateVisualContent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMGenerateVisualContent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creatingAnImage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#calculating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMCompleteSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#calculating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPerformCalculations_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMTakeSupervisedWrittenExamination"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#calculating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPreparePresentationMaterials -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMPreparePresentationMaterials">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPrepareForOralAssessment"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#preparingAPresentationSupport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMReviseDeliverables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskPMReviseDeliverables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityPMPerformSimulation"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#fixingMyWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskReformulatingDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskReformulatingDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#reformulating"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskReformulatingWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskReformulatingWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#reformulating"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingWorkingInteams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSearchingForInformationDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSearchingForInformationDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForInformationDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSearchingForVerifiefInformationWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSearchingForVerifiefInformationWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForVerifiedInformationWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSummarizingScientificArticlesDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSummarizingScientificArticlesDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#summarizing"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSummarizingScientificArticlesWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskSummarizingScientificArticlesWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#summarizing"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskTranslatingTextDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskTranslatingTextDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#translatingText"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfTranslatingTextDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateIdeas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateIdeas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyValueManagementToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#findingIdea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateImage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateImage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S4"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creatingAnImage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateOutline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMGenerateOutline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyFunctionalAnalysisToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#generatingAPlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMRephraseContent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMRephraseContent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyValueManagementToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#reformulating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMReviseDeliverables_S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMReviseDeliverables_S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S2"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#fixingMyWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMReviseDeliverables_S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMReviseDeliverables_S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMPrepareForIntermediateAssessment_S4"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#fixingMyWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForExamples -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForExamples">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyFunctionalAnalysisToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#lookingForExample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForInformation_S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForInformation_S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyFunctionalAnalysisToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForInformation_S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskVMSearchForInformation_S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityVMApplyValueManagementToolsToCaseStudy"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#searchingForInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskWritingDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskWritingDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityDoingHomework"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#writing"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingDoingHomework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskWritingWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#taskWritingWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningTask"/>
+        <scan-llms:belongsToActivity rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#activityWorkingInTeamsForTheCaseStudies"/>
+        <scan-llms:hasGenericTask rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#writing"/>
+        <scan-llms:hasUsage rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingWorkingInTeams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#teamBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#tournamentBasedLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#tournamentBasedLearning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#PedagogicalFormula"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#translatingText -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#translatingText">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#understand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#understand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LearningObjective"/>
+        <scan-llms:cognitiveComplexityScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</scan-llms:cognitiveComplexityScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAnsweringQuestionWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAnsweringQuestionWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionAttendingTheLecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionAttendingTheLecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfAskingQuestionWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutBibliographicalResearchWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutBibliographicalResearchWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutDocumentaryResearchDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutDocumentaryResearchDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutTheCaseStudyWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCarryingOutTheCaseStudyWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointWorkingInteams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfClarifyingPointWorkingInteams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCorrectingTextDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfCorrectingTextDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfEvaluatingMyWorkDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfEvaluatingMyWorkDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfExtractingInformationOfADocumentDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfExtractingInformationOfADocumentDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfFindingIdeaDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfFindingIdeaDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingForExampleWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingUpDefinitionAttendingTheLecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfLookingUpDefinitionAttendingTheLecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingWorkingInteams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfReformulatingWorkingInteams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForInformationDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForInformationDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForVerifiedInformationWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSearchingForVerifiedInformationWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Perplexity"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfSummarizingScientificArticlesWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatPDF"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfTranslatingTextDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfTranslatingTextDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#Perplexity"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingDoingHomework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingDoingHomework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingWorkingInTeams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#usageOfWritingWorkingInTeams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#LlmTransformerApplicationUsage"/>
+        <scan-llms:usesApplication rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#ChatGPT"/>
+        <scan-llms:usageDeclared rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</scan-llms:usageDeclared>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#writing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#writing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#GenericLearningTask"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#computationalThinking"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#creativity"/>
+        <scan-llms:genericTaskTargetsSkill rdf:resource="http://www.semanticweb.org/cloux1/ontologies/2026/3/scan-llms#criticalThinking"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
